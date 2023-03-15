@@ -29,5 +29,10 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'buttonOrLinkText',
+      title: 'Button or Link Text',
+      type: 'string',
+    }),
   ],
 })
