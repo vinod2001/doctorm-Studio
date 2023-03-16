@@ -16,6 +16,14 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'content',
+      title: 'content',
+      type:'array',
+      of: [
+        {type:'block'},
+      ]
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
