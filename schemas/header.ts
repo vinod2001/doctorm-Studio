@@ -18,14 +18,12 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'content',
-      type:'array',
-      of: [
-        {type:'block'},
-      ]
+      type: 'array',
+      of: [{type: 'block'}],
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
+      name: 'logo',
+      title: 'Logo',
       type: 'image',
       options: {
         hotspot: true,

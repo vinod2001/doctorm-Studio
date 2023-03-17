@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'pdp',
+  name: 'productDetail',
   title: 'PDP',
   type: 'document',
   fields: [
@@ -26,64 +26,37 @@ export default defineType({
     //   to: {type: 'author'},
     // }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'productCarousel',
+      title: 'Product Carousel',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    }),
+    defineField({
+      name: 'thumpnails',
+      title: 'Thumpnails',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    }),
+
+    defineField({
+      name: 'measurements',
+      title: 'Measurements',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'measurementImages',
+      title: 'Measurement Images',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    }),
+    defineField({
+      name: 'frameImage',
+      title: 'Frame image',
       type: 'image',
       options: {
         hotspot: true,
       },
-    }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'findFrames',
-      title: 'Find Frames',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    
-    defineField({
-      name: 'topCategoriesHeading',
-      title: 'Top Categories Heading',
-      type: 'string',
-    }),
-    defineField({
-      name: 'topCategories',
-      title: 'Top Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'topBrandsHeading',
-      title: 'Top Brands Heading',
-      type: 'string',
-    }),
-    defineField({
-      name: 'topBrands',
-      title: 'Top Brands',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'largeBanners',
-      title: 'Large Banners',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'biggerBanners',
-      title: 'Bigger Banners',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
     }),
     defineField({
       name: 'body',
