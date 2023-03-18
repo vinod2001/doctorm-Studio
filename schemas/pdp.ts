@@ -50,13 +50,19 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: {type: 'category'}}],
     }),
+    // defineField({
+    //   name: 'frameImage',
+    //   title: 'Frame image',
+    //   type: 'image',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    // }),
     defineField({
       name: 'frameImage',
-      title: 'Frame image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      title: 'frameImage Images',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
     }),
     defineField({
       name: 'body',
